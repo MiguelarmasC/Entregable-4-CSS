@@ -118,7 +118,7 @@ footer{
             font-weight:500;
             border: 0px;
             background-color: transparent;
-            width: 33%;
+            width: 45%;
             position: relative;
             @include underline-decoration(100%, -15px, 3px);
             @include hover-link($green);
