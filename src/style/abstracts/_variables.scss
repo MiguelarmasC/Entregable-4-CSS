@@ -1,0 +1,22 @@
+@use '../vendors/vendors' as *;
+/* Variables */
+
+/*FONTS*/
+$general-font: "Space Grotesk", sans-serif;
+$titule-font: "x";
+
+/*COLORS*/
+$green:rgba(78, 225, 160);
+$white: rgba(255, 255, 255);
+$light-black: rgba(36, 36, 36, 0.5);
+$light-black-2: rgba(36, 36, 36, 0.7);
+$black: rgba(21, 21, 21);
+$grey: rgba(217, 217, 217);
+$red: red;
+
+// VIEWPORT SIZE
+$bp-tablet: 768px;
+$bp-tablet-horizontal: 1024px;
+$bp-desktop: 1200px;
+$bp-desktop-xl: 1440px;
+

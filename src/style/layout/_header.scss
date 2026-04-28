@@ -1,0 +1,81 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+html{
+    background-color: $black;
+}
+
+.container{
+    max-width: $bp-desktop-xl;
+    @include breakpoint(desktopxl){
+        max-width: 1900px;
+    }
+}
+
+header{
+    background-color: $light-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -16px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    @include breakpoint(tablet){
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        background-image: linear-gradient(to right, $black 49%, $light-black 49%);
+        margin-right: -16px;
+        padding-right: 32px;
+        align-items: baseline;
+    }
+    @include breakpoint(desktopxl){
+        width: 80%;
+        margin: 0px;
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: -16px;
+        background-image: linear-gradient(to right, $black 50%, $light-black 50%);
+    }
+    .logo{
+        @include breakpoint(tablet){
+            display: inline-block; 
+            justify-self: start;
+        }
+        @include breakpoint(desktopxl){
+            font-size: 25px
+        }
+    }
+    a{
+        @include reset-link($white);
+        @include hover-link($white);
+        margin-top: 30px;
+        margin-bottom: 25px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .redes{
+        @include reset-list;
+        display: flex;
+        gap: 15px;
+        margin-bottom: 50px;
+        li > a > svg{
+            width: 19px;
+            height: 19px;
+            fill: $white;
+            &:hover{
+                fill: $green;
+            }
+            @include breakpoint(desktopxl){
+                width: 25px;
+                height: 25px;
+            }
+        }
+        @include breakpoint(tablet){
+            justify-self:end;
+            margin-bottom: 10px;
+        }
+    }
+}

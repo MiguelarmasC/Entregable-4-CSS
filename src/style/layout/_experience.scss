@@ -1,0 +1,63 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.experience{
+    @include line-decoration(-20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 50px;
+    position: relative;
+    @include breakpoint(tablet){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: start;
+    }
+    @include breakpoint(desktopxl){
+        margin-left: 8%;
+        margin-right: 8%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    div:first-child{
+        margin-top: 10px;
+        @include breakpoint(desktopxl){
+            margin-top: 60px;
+        }
+    }
+    .skils{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        @include breakpoint(tablet){
+            align-items: start;
+        }
+        h2{
+            font-size: 32px;
+            @include breakpoint(desktopxl){
+                font-size: 55px;
+            }
+        }
+        p{
+            @include breakpoint(desktopxl){
+                font-size: 20px;
+            }
+        }
+    }
+    &::after{
+        content: url(../../img/Group\ 26.svg);
+        position: absolute;
+        left: 53%;
+        top: 100%;
+        @include breakpoint(tablet){
+            left: 75%;
+            top: 80%;
+        }
+        @include breakpoint(desktopxl){
+            left: 86%;
+            top: 74%;
+        }
+    }
+}
+
