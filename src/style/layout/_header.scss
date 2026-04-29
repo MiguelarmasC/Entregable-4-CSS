@@ -8,6 +8,8 @@ html{
 .container{
     max-width: $bp-desktop-xl;
     margin: 0 auto;
+    padding: 16px;
+    overflow-x: hidden;
     @include breakpoint(desktopxl){
         max-width: 1900px;
     }
