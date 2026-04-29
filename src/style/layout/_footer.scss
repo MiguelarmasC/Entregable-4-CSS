@@ -7,10 +7,10 @@ footer{
     margin-left: -16px;
     margin-right: -16px;
     margin-bottom: -16px;
-    padding-left: 16px;
+    padding-left: 32px;
     padding-right: 32px;
     padding-top: 80px;
-    width: 100vw;
+    
     @include breakpoint(desktopxl){
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -118,15 +118,17 @@ footer{
             font-weight:500;
             border: 0px;
             background-color: transparent;
-            width: 45%;
+            width: fit-content;
+            display: inline-block;
+            justify-self: start;
             position: relative;
             @include underline-decoration(100%, -15px, 3px);
             @include hover-link($green);
             @include breakpoint(tablet){
-                width: 34%;
+               
             }
             @include breakpoint(desktopxl){
-                width: 23%;
+                
             }
         }
         div:last-of-type{
